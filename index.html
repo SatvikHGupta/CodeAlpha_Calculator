@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" id="app" aria-labelledby="title">
+    <header class="topbar" role="banner">
+      <h1 id="title" class="app-title">Calculator</h1>
+    </header>
+
+    <section class="calc">
+      <label for="display" class="sr-only">Calculator input</label>
+      <input
+        id="display"
+        class="display"
+        type="text"
+        inputmode="numeric"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="0"
+        aria-live="polite"
+      />
+
+      <div class="keys" role="group" aria-label="Calculator keys">
+        <button data-act="clear" class="op op-red" type="button">C</button>
+        <button data-val="(" class="op" type="button">(</button>
+        <button data-val=")" class="op" type="button">)</button>
+        <button data-act="del" class="op" type="button">⌫</button>
+
+        <button data-val="7" class="num" type="button">7</button>
+        <button data-val="8" class="num" type="button">8</button>
+        <button data-val="9" class="num" type="button">9</button>
+        <button data-val="÷" class="op" type="button">÷</button>
+
+        <button data-val="4" class="num" type="button">4</button>
+        <button data-val="5" class="num" type="button">5</button>
+        <button data-val="6" class="num" type="button">6</button>
+        <button data-val="×" class="op" type="button">×</button>
+
+        <button data-val="1" class="num" type="button">1</button>
+        <button data-val="2" class="num" type="button">2</button>
+        <button data-val="3" class="num" type="button">3</button>
+        <button data-val="-" class="op" type="button">−</button>
+
+        <button data-val="0" class="num zero" type="button">0</button>
+        <button data-val="." class="num" type="button">.</button>
+        <button data-val="+" class="op" type="button">+</button>
+        <button data-act="equals" class="eq" type="button">=</button>
+      </div>
+
+      <div class="hint" id="hint" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
